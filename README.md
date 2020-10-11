@@ -1,3 +1,1 @@
-# Team-074
-# Team-074
-# Team-074
+Repository for the projet named Digital directory of agricultural entrepreneurs
