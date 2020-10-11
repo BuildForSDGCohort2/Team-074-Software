@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}AGRI-ANNUAIRE | Connexion{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <div class="card card-body">
+                <h2 class="text-center">Formulaire de connexion</h1>
+
+{% if error %}
+<p class="text-danger"><strong>Utilisateur inconnu ou mauvais de mot de passe.</strong></p>
+{% endif %}
+
+{% if user.is_authenticated %}
+<h5 class="text-success">Vous êtes connecté, {{ user.username }} !</h5>
+{% else %}
+<form method="post" action=".">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn btn-sm btn-success btn-block" type="submit" value="Se connecter" />
+</form>
+{% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
