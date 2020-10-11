@@ -82,6 +82,7 @@ WSGI_APPLICATION = 'agri_annuaire.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+"""
 DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.sqlite3',
@@ -95,6 +96,19 @@ DATABASES = {
 
     }
 }
+"""
+DATABASES = {
+    'default': {
+        'ENGINE' : 'django.db.backends.postgresql',
+        'NAME' : 'd1rkus9ooo9848',
+        'HOST' : 'ec2-3-218-75-21.compute-1.amazonaws.com',
+        'PORT' : 5432,
+        'USER' : 'iiykngvlkshgyx',
+        'PASSWORD' : 'f43adba2eb586c9fc37ec0770324c5a29abe1b88731a5597c63c118898de2264',
+    }
+}
+
+#postgres://iiykngvlkshgyx:f43adba2eb586c9fc37ec0770324c5a29abe1b88731a5597c63c118898de2264@ec2-3-218-75-21.compute-1.amazonaws.com:5432/d1rkus9ooo9848
 
 
 # Password validation
